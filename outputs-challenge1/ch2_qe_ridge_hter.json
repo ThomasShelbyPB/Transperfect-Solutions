@@ -1,0 +1,28 @@
+{
+  "task": "challenge2_quality_estimation",
+  "target": "HTER_proxy (lower=better)",
+  "embedder": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+  "model": "ridge_regression_on_[embeddings(src+mt)+handcrafted_features]",
+  "alpha": 10.0,
+  "k_folds": 5,
+  "metrics": {
+    "pearson": {
+      "mean": -0.17472856395893674,
+      "std": 0.36035459382586765
+    },
+    "spearman": {
+      "mean": -0.2235164835164835,
+      "std": 0.15628150932141102
+    },
+    "mae": {
+      "mean": 0.3104576200246811,
+      "std": 0.046920614094872755
+    }
+  },
+  "n_rows": 68,
+  "feature_dims": {
+    "embeddings": 384,
+    "handcrafted": 13,
+    "total": 397
+  }
+}

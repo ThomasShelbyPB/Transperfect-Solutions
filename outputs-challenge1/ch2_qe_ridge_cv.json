@@ -1,0 +1,23 @@
+{
+  "task": "challenge2_qe",
+  "target": "hter_proxy",
+  "model": "ridge",
+  "embedder": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+  "ridge_alpha": 10.0,
+  "kfold": 5,
+  "metrics_kfold": {
+    "pearson": {
+      "mean": -0.42241162061691284,
+      "std": 0.30217206478118896
+    },
+    "spearman": {
+      "mean": -0.3996883034706116,
+      "std": 0.29209786653518677
+    },
+    "mae": {
+      "mean": 0.5653074383735657,
+      "std": 0.16658687591552734
+    }
+  },
+  "n_rows": 68
+}
